@@ -117,3 +117,52 @@ matilda.calcAge();
 const f = besim.calcAge;
 f();
 */
+
+
+/*
+//Pre ES6 solution LMAO
+const besim = {
+    firstName: 'Besim',
+    year: 1994,
+    calcAge: function () {
+        console.log(2037 - this.year);
+
+        //Pre ES6 solution LMAO Solution 1
+        // const self = this; // self or that
+        // const isMellenial = function () {
+        //     console.log(self);
+        //     console.log(self.year >= 1981 && self.year <= 1996);
+        //     //console.log(this.year >= 1981 && this.year <= 1996);
+        // };
+        // isMellenial();
+
+        //Post ES6 Solution 2
+        const isMellenial = () => {
+            console.log(this);
+            console.log(this.year >= 1981 && this.year <= 1996);
+        };
+        isMellenial();
+    },
+
+    greet: () => {
+        console.log(this);
+        console.log(`Hey ${this.firstName}`);
+    },
+};
+besim.greet();
+besim.calcAge();
+
+// Arguments Keyword
+const addExpr = function (a, b) {
+    console.log(arguments)
+    return a + b;
+}
+addExpr(2, 5);
+addExpr(2, 5, 8, 12)
+
+var addArrow = (a, b) => {
+    console.log(arguments)
+    return a + b;
+}
+addArrow(2, 5, 8);
+*/
