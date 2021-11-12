@@ -36,6 +36,7 @@ const firstName = 'Besim';
 calcAge(1994);
 */
 
+/*
 // Hoisting with Variables
 console.log(me);
 //console.log(job);
@@ -79,3 +80,40 @@ const z = 3;
 console.log(x === window.x);
 console.log(y === window.y);
 console.log(z === window.z);
+*/
+
+/*
+// 'this' lecture
+
+const calcAge = function (birthYear) {
+    console.log(2037 - birthYear);
+    console.log(this);
+};
+calcAge(1991);
+
+const calcAgeArrow = birthYear => {
+    console.log(2037 - birthYear);
+    console.log(this);
+};
+calcAgeArrow(1991);
+
+const besim = {
+    year: 1994,
+    calcAge: function () {
+        console.log(this);
+        console.log(2037 - this.year);
+    }
+};
+besim.calcAge();
+
+
+const matilda = {
+    year: 2017,
+};
+
+matilda.calcAge = besim.calcAge;
+matilda.calcAge();
+
+const f = besim.calcAge;
+f();
+*/
