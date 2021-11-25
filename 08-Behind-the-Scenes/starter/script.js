@@ -118,7 +118,6 @@ const f = besim.calcAge;
 f();
 */
 
-
 /*
 //Pre ES6 solution LMAO
 const besim = {
@@ -186,7 +185,7 @@ console.log('Friend', friend);
 console.log('Me', me);
 */
 
-
+/*
 //Primitive types
 let lastName = 'Williams';
 let oldLastName = lastName;
@@ -222,3 +221,5 @@ console.log('Before marriage:', jessica2);
 console.log('After marriage:', jessicaCopy);
 
 //Cloning Object
+*/
+
