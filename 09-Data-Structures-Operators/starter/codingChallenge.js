@@ -83,6 +83,8 @@ team2 < team1 && console.log('team 2 is more likely to win')
 
 // CODINGCHALLENGE #2
 /*
+
+
 const game = {
     team1: 'Bayern Munich',
     team2: 'Borrussia Dortmund',
@@ -158,3 +160,5 @@ for (const player of game.scored) {
 }
 console.log(scorers);
 */
+
+// CODINGCHALLENGE #3
