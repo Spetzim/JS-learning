@@ -194,3 +194,5 @@ for (const [minute, happened] of gameEvents) {
     console.log(`${str} ${minute}: ${happened}`)
 }
 */
+
+// CODINGCHALLENGE #4
