@@ -196,3 +196,79 @@ for (const [minute, happened] of gameEvents) {
 */
 
 // CODINGCHALLENGE #4
+/*
+document.body.append(document.createElement('textarea'));
+document.body.append(document.createElement('button'));
+const text = document.querySelector('textarea').value;
+
+// TEST DATA
+
+underscore_case
+ first_name
+Some_Variable
+  calculate_AGE
+  delayed_departure
+
+
+document.querySelector('button').addEventListener('click', function () {
+    const text = document.querySelector('textarea').value;
+    const rows = text.split('\n');
+    for (const [i, row] of rows.entries()) {
+        const [first, second] = row.toLowerCase().trim().split('_');
+
+        const output = `${first}${second.replace(
+            second[0],
+            second[0].toUpperCase()
+        )}`
+        console.log(`${output.padEnd(20)}${'✔'.repeat(i + 1)}`);
+    }
+})
+
+
+// MY SOLUTION
+const displayMessage = function (message) {
+    document.querySelector('textarea').textContent = message;
+}
+
+document.querySelector('button').addEventListener('click', function () {
+    let text = document.querySelector('textarea').value;
+    text = text.replaceAll(' ', '');
+    let splittedText = text.split('\n')
+    let words;
+    let finalString;
+    for (let i = 0; i < splittedText.length; i++) {
+        words = splittedText[i].split('_')
+        finalString = words[0].toLowerCase() + words[1][0].toLocaleUpperCase() + words[1].slice(1).toLowerCase();
+        console.log(finalString.padEnd(finalString.length, '++++++++'));
+    }
+
+})
+    * /
+
+/*
+
+const btnRoll = document.querySelector('.btn--roll');
+
+btnRoll.addEventListener('click', function () {
+    if (playing) {
+        // 1. Generate random dice roll
+        const dice = Math.trunc(Math.random() * 6) + 1;
+        console.log(dice);
+
+        // 2. Display dice
+        diceEl.classList.remove('hidden');
+        diceEl.src = `dice-${dice}.png`;
+
+        // 3. Check for rolled 1: if true switch to next player
+        if (dice !== 1) {
+            // Add dice to current score
+            currentScore += dice;
+            document.getElementById(`current--${activePlayer}`).textContent = currentScore;
+        } else {
+            // Switch to next player
+            switchPlayer();
+        }
+    }
+})
+*/
+
