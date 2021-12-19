@@ -29,4 +29,20 @@ const poll = {
 document.querySelector('.poll').addEventListener('click', poll.registerNewAnswer.bind(poll));
 */
 
+// CODING CHALLENGE #2
+/*
+(function () {
+    const header = document.querySelector('h1');
+    header.style.color = 'red';
 
+    document.querySelector('body').addEventListener('click', function () {
+        header.style.color = 'blue'
+    })
+})();
+
+// My solution
+// const blue = function () {
+//     header.style.color = 'blue';
+// }
+// document.body.addEventListener('click', blue);
+*/
