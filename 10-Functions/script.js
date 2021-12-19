@@ -136,7 +136,7 @@ const eurowings = {
 
 const book = lufthansa.book;
 
-//Call method 
+//Call method
 book.call(eurowings, 23, 'Sarah Williams')
 console.log(eurowings);
 
@@ -204,4 +204,20 @@ const addTaxRate = function (rate) {
 const addVAT2 = addTaxRate(0.23);
 console.log(addVAT2(100));
 console.log(addVAT2(23));
+*/
+
+// IIFE, IMMIDIATELY INVOKED FUNCTION EXPRESSIONS
+/*
+(function () {
+    console.log('This will never run again');
+    const isPrivate = 23;
+})();
+
+(() => console.log('This will ALSO never run again'))();
+
+{
+    const isPrivate = 23;
+    var notPrivate = 46;
+}
+console.log(notPrivate);
 */
