@@ -92,7 +92,7 @@ document.body.addEventListener('click', high5);
 ['Jonas', 'Martha', 'Adam'].forEach(high5);
 */
 
-// 
+//
 /*
 const greet = function (greeting) {
     return function (name) {
@@ -282,5 +282,3 @@ const boardPassengers = function (n, wait) {
 const perGroup = 1000;
 boardPassengers(180, 3)
 */
-
-// sista testendadadadadadadada
