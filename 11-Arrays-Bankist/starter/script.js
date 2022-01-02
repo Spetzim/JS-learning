@@ -77,6 +77,12 @@ const displayMovements = function (movements) {
 }
 displayMovements(account1.movements)
 
+const calcDisplayBalance = function (movements) {
+  const balance = movements.reduce((acc, mov) => acc + mov, 0);
+  labelBalance.textContent = `${balance} €`;
+}
+calcDisplayBalance(account1.movements);
+
 const createUsernames = function (accs) {
   accs.forEach(function (acc) {
     acc.username = acc.owner
@@ -87,7 +93,7 @@ const createUsernames = function (accs) {
   })
 };
 createUsernames(accounts)
-console.log(accounts);
+
 
 
 /////////////////////////////////////////////////
@@ -132,7 +138,7 @@ const letters = arr.concat(arr2);
 console.log(letters);
 console.log([...arr, ...arr2]);
 
-// JOIN 
+// JOIN
 console.log(letters.join(' - '));
 */
 
@@ -211,4 +217,25 @@ const movementsDescriptions = movements.map(
 )
 
 console.log(movementsDescriptions);
+*/
+
+/*
+const deposits = movements.filter(mov => mov > 0)
+console.log(movements);
+console.log(deposits);
+
+const withdrawals = movements.filter(mov => mov < 0)
+console.log(withdrawals);
+*/
+
+/*
+const balance = movements.reduce((acc, curr) => acc + curr, 0)
+console.log(balance);
+*/
+
+// Maximum value
+/*
+const max = movements.reduce((acc, mov) => acc > mov ? acc : mov, movements[0])
+
+console.log(max);
 */
