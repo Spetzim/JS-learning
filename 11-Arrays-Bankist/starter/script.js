@@ -77,7 +77,17 @@ const displayMovements = function (movements) {
 }
 displayMovements(account1.movements)
 
-
+const createUsernames = function (accs) {
+  accs.forEach(function (acc) {
+    acc.username = acc.owner
+      .toLowerCase()
+      .split(' ')
+      .map(name => name[0])
+      .join('');
+  })
+};
+createUsernames(accounts)
+console.log(accounts);
 
 
 /////////////////////////////////////////////////
@@ -86,7 +96,7 @@ displayMovements(account1.movements)
 
 
 
-//const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 /////////////////////////////////////////////////
 
@@ -186,3 +196,19 @@ currenciesUnique.forEach(function (value, _, map) {
 })
 */
 
+/*
+const eurToUsd = 1.1;
+
+const movementsUSD = movements.map(function (mov) {
+  return mov * eurToUsd;
+})
+
+console.log(movements, movementsUSD);
+
+const movementsDescriptions = movements.map(
+  (movement, i) =>
+    `Movement ${i + 1}: You ${movement > 0 ? 'deposited' : 'withdrew'} ${Math.abs(movement)}`
+)
+
+console.log(movementsDescriptions);
+*/
