@@ -28,8 +28,9 @@ checkDogs(julia, kate)
 
 // Challenge #2
 /*
+
 const calcAverageHumanAge = function (ages) {
-    //1. 
+    //1.
     let humanAge;
     humanAge = ages.map((age) => age <= 2 ? humanAge = 2 * age : humanAge = 16 + age * 4)
     console.log(humanAge);
@@ -42,5 +43,18 @@ const calcAverageHumanAge = function (ages) {
 }
 
 console.log(calcAverageHumanAge([5, 2, 4, 1, 15, 8, 3]))
+console.log(calcAverageHumanAge([16, 6, 10, 5, 6, 1, 4]))
+*/
+
+
+// Challenge #3
+/*
+const calcAverageHumanAge = (ages) =>
+    ages
+        .map(age => (age <= 2 ? age = 2 * age : age = 16 + age * 4))
+        .filter((age) => age >= 18)
+        .reduce((acc, curr, i, arr) => acc + curr / arr.length, 0);
+
+console.log(calcAverageHumanAge([5, 2, 4, 1, 15, 8, 3]));
 console.log(calcAverageHumanAge([16, 6, 10, 5, 6, 1, 4]))
 */
